@@ -3,9 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Pacific Northwest | Plan Your Trip</title>
+    <link rel="stylesheet" href="styling.css">
 </head>
 <body>
-    
+
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="history.html">History & Culture</a></li>
+                <li><a href="plan-your-trip.html" class="active">Plan Your Trip</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Plan Your Trip</h1>
+
+        <section class="itinerary">
+            <h2>Simple 3-Day Itinerary (Seattle & Portland Focus)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Morning Activity</th>
+                        <th>Afternoon Activity</th>
+                        <th>Evening Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Day 1</td>
+                        <td>Explore Pike Place Market</td>
+                        <td>Space Needle & MoPOP Museum</td>
+                        <td>Dinner in Capitol Hill, Seattle</td>
+                    </tr>
+                    <tr>
+                        <td>Day 2</td>
+                        <td>Drive to Portland & Check-in</td>
+                        <td>International Rose Test Garden</td>
+                        <td>Explore Portland's Food Cart Pods</td>
+                    </tr>
+                    <tr>
+                        <td>Day 3</td>
+                        <td>Hike Multnomah Falls (Oregon)</td>
+                        <td>Visit a Local Brewery/Coffee Shop</td>
+                        <td>Departure</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="travel-essentials">
+            <div class="tips">
+                <h2>Travel Tips</h2>
+                <ul>
+                    <li>**Pack layers:** Weather changes quickly from coast to mountains.</li>
+                    <li>Book ferry and state park passes well in advance, especially in peak season.</li>
+                    <li>Allow extra time for travel; city traffic can be heavy.</li>
+                    <li>The PNW is beautiful year-round, but summer offers the best hiking and driest weather.</li>
+                </ul>
+            </div>
+            
+            <div class="checklist">
+                <h2>Basic Packing Checklist</h2>
+                <ul>
+                    <li>Waterproof/Rain Jacket</li>
+                    <li>Hiking Boots or sturdy, comfortable walking shoes</li>
+                    <li>Reusable water bottle and coffee mug</li>
+                    <li>Comfortable layers (fleece/sweaters)</li>
+                    <li>Camera for stunning views</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <h2>Send Us Your Questions</h2>
+            <form action="#" method="POST" class="simple-form">
+                
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="full_name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email_address" required>
+
+                <label for="date">Planned Visit Date:</label>
+                <input type="date" id="date" name="visit_date">
+
+                <label for="travelers">Number of Travelers:</label>
+                <input type="number" id="travelers" name="num_travelers" min="1" required>
+
+                <label for="questions">Your/More Questions:</label>
+                <textarea id="questions" name="more_questions" rows="4"></textarea>
+
+                <button type="submit">Send Inquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 The Pacific Northwest Tourism</p>
+        <p>Contact: <a href="mailto:info@pnwtravel.com">info@pnwtravel.com</a></p>
+    </footer>
+
 </body>
 </html>

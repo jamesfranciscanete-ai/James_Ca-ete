@@ -1,0 +1,279 @@
+/* --- 1. GLOBAL RESET AND BASE STYLES --- */
+body {
+    /* Base typography */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /* Centers content and sets maximum readable width */
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    color: #2c3e50; /* Dark blue/gray heading color */
+    margin-top: 0;
+}
+
+/* --- 2. HEADER AND NAVIGATION STYLES --- */
+
+/* Hero Banner Styling (Specific to index.html) */
+.hero-banner {
+    /* Set your background image path and ensure it covers the area */
+    background-image: url('images/hero.jpg'); 
+    background-size: cover;
+    background-position: center 30%;
+    height: 450px; /* Large banner height requirement */
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Push content to the bottom for better visibility */
+}
+
+.hero-content {
+    /* Style for website title and tagline */
+    padding: 10px 0 20px;
+    background: rgba(0, 0, 0, 0.4); /* Subtle overlay for text readability */
+    flex-grow: 1; /* Allows it to take up available space above the nav */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-banner h1 {
+    font-size: 3.5em;
+    margin-bottom: 5px;
+    color: white; /* Title is white on dark overlay */
+}
+
+.tagline {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #ecf0f1;
+}
+
+/* Navigation Menu (Common to all pages) */
+.main-nav {
+    background-color: #34495e; /* Darker bar for contrast */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center the links */
+}
+
+.main-nav li {
+    margin: 0 10px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    background-color: #2ecc71; /* Green hover/active state */
+}
+
+
+/* --- 3. HOMEPAGE GRID STYLES (index.html) --- */
+
+.gallery-preview {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Image gallery grid (3x2 or 4x2 layout) */
+.image-grid {
+    display: grid;
+    /* 3 columns of equal width for the 3x2 requirement */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent look */
+    object-fit: cover; /* Ensures image covers area without distortion */
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 4. DESTINATIONS & ACTIVITIES STYLES --- */
+
+.tourist-spot {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: auto; /* Clear floats if images are floated */
+}
+
+.tourist-spot img {
+    width: 30%; /* Make image smaller */
+    height: auto;
+    float: left; /* Image on the left */
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.activity-category {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-left: 5px solid #2ecc71;
+    border-radius: 5px;
+}
+
+.activity-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-category li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #bdc3c7;
+    display: flex;
+    align-items: center;
+}
+
+.activity-category li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* --- 5. HISTORY & CULTURE STYLES --- */
+
+.history-section, .culture-highlights {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 6. TRAVEL GUIDE STYLES (plan-your-trip.html) --- */
+
+/* Itinerary Table Format */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #3498db; /* Blue heading */
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra striping for readability */
+}
+
+.travel-essentials {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.travel-essentials > div {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.travel-essentials ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Contact Form Styling */
+.simple-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.simple-form input[type="text"],
+.simple-form input[type="email"],
+.simple-form input[type="date"],
+.simple-form input[type="number"],
+.simple-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+}
+
+.simple-form textarea {
+    resize: vertical; /* Allows resizing only vertically */
+}
+
+.simple-form button[type="submit"] {
+    background-color: #2ecc71; /* Green button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.simple-form button[type="submit"]:hover {
+    background-color: #27ae60;
+}
+
+/* --- 7. FOOTER STYLES --- */
+
+.site-footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.site-footer a {
+    color: #2ecc71;
+    text-decoration: none;
+}
